@@ -24,3 +24,12 @@ def calculate_d2(d1, T, sigma):
 
     return d2
 
+def call_price(S, K, T, r, sigma):  
+
+
+    d1 = calculate_d1(S, K, T, r, sigma)
+    d2 = calculate_d2(d1, T, sigma)
+
+    C = ( S * normal_cdf(d1) ) - ( K * (math.e ** (-r * T)) * normal_cdf(d2))
+
+    return C
