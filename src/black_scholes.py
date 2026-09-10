@@ -43,3 +43,4 @@ def put_price(S, K, T, r, sigma):
 
     return P
 
+# print(call_price(100, 100, 1, 0.05, 0.20))
