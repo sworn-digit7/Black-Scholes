@@ -40,4 +40,13 @@ def call_theta(S, K, T, r, sigma):
 
     return call_theta
 
+def put_theta(S, K, T, r, sigma):
+
+    put_theta = (
+
+        - (S * normal_pdf(calculate_d1(S, K, T, r, sigma) * sigma) / (2 * math.sqrt(T)))
+
+        + (r * K * (math.e ** (-r*T)) * normal_cdf( - (calculate_d2(S, K, T, r, sigma))))
+    )
+
 
