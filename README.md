@@ -153,7 +153,7 @@ These assumptions mean the model won't perfectly match real-world option prices 
 
 ## Sensitivity Analysis
 
-The graphs below show how call and put option prices respond to changes in each input, generated automatically by the program.
+The graphs below show how call and put option prices respond to changes in each input, generated automatically by the program. (Using the values from the example values)
 
 ### Stock Price
 ![Stock price sensitivity](graphs/examples/stock_price_sensitivity.png)
