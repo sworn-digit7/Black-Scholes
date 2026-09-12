@@ -18,7 +18,7 @@ def put_delta(S, K, T, r, sigma):
 
 def gamma(S, K, T, r, sigma):
 
-    gamma_value = normal_pdf(calculate_d1(S, K, T, r, sigma)) / ( S * sigma * math.sqrt(T))
+    gamma_value = normal_pdf(calculate_d1(S, K, T, r, sigma)) / (S * sigma * math.sqrt(T))
 
     return gamma_value
 
