@@ -21,3 +21,9 @@ def gamma(S, K, T, r, sigma):
 
     return r
 
+def vega(S, K, T, r, sigma):
+
+    vega = S * normal_pdf(calculate_d1(S, K, T, r, sigma)) * (math.sqrt(T))
+
+    return vega
+
