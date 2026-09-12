@@ -151,6 +151,26 @@ These assumptions mean the model won't perfectly match real-world option prices 
 - Data visualisation with `matplotlib`
 - Clean project structure and separation of concerns (pricing, Greeks, validation, and plotting kept independent)
 
+## Sensitivity Analysis
+
+The graphs below show how call and put option prices respond to changes in each input, generated automatically by the program.
+
+### Stock Price
+![Stock price sensitivity](graphs/examples/stock_price_sensitivity.png)
+
+### Strike Price
+![Strike price sensitivity](graphs/examples/strike_price_sensitivity.png)
+
+### Time to Expiry
+![Time sensitivity](graphs/examples/time_sensitivity.png)
+
+### Volatility
+![Volatility sensitivity](graphs/examples/volatility_sensitivity.png)
+
+### Interest Rate
+![Interest rate sensitivity](graphs/examples/interest_rate_sensitivity.png)
+
+
 ## Possible Extensions
 
 - Support for American options (early exercise)
