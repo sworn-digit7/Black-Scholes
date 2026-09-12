@@ -75,7 +75,7 @@ d2 = d1 − σ√T
 Clone the repository and install dependencies:
 
 ```bash
-git clone <your-repo-url>
+git clone <https://github.com/sworn-digit7/Black-Scholes>
 cd Black-Scholes
 pip install -r requirements.txt
 ```
