@@ -29,12 +29,19 @@ def main():
     print(f"Theta: {call_theta(S, K, T, r, sigma):.4f}")
     print(f"Rho: {call_rho(S, K, T, r, sigma):.4f}")
 
+
     plot_sensitivity("S", np.linspace(S * 0.5, S * 1.5, 100), S, K, T, r, sigma, "graphs/stock_price_sensitivity.png")
     plot_sensitivity("K", np.linspace(K * 0.5, K * 1.5, 100), S, K, T, r, sigma, "graphs/strike_price_sensitivity.png")
     plot_sensitivity("T", np.linspace(0.01, T * 2, 100), S, K, T, r, sigma, "graphs/time_sensitivity.png")
     plot_sensitivity("sigma", np.linspace(sigma * 0.25, sigma * 2, 100), S, K, T, r, sigma, "graphs/volatility_sensitivity.png")
     plot_sensitivity("r", np.linspace(0.0, r * 3, 100), S, K, T, r, sigma, "graphs/interest_rate_sensitivity.png")
 
+    print("\n✅ Graphs generated in the 'graphs/' folder:")
+    print("   - stock_price_sensitivity.png")
+    print("   - strike_price_sensitivity.png")
+    print("   - time_sensitivity.png")
+    print("   - volatility_sensitivity.png")
+    print("   - interest_rate_sensitivity.png")
 
 if __name__ == "__main__":
     main()
