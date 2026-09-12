@@ -24,13 +24,13 @@ def gamma(S, K, T, r, sigma):
 
 def vega(S, K, T, r, sigma):
 
-    vega = S * normal_pdf(calculate_d1(S, K, T, r, sigma)) * (math.sqrt(T))
+    v = S * normal_pdf(calculate_d1(S, K, T, r, sigma)) * (math.sqrt(T))
 
-    return vega
+    return v
 
 def call_theta(S, K, T, r, sigma):
 
-    call_theta = (
+    c_theta = (
 
     (- (S * normal_pdf(calculate_d1(S, K, T, r, sigma)) * sigma) / ( 2 * math.sqrt(T) ))
 
@@ -38,15 +38,23 @@ def call_theta(S, K, T, r, sigma):
 
     )
 
-    return call_theta
+    return c_theta
 
 def put_theta(S, K, T, r, sigma):
 
-    put_theta = (
+    p_theta = (
 
         - (S * normal_pdf(calculate_d1(S, K, T, r, sigma) * sigma) / (2 * math.sqrt(T)))
 
         + (r * K * (math.e ** (-r*T)) * normal_cdf( - (calculate_d2(S, K, T, r, sigma))))
     )
 
+    return p_theta
+
+
+def call_rho(S, K, T, r, sigma):
+
+    c_rho = (K * T * (math.e ** (-r * T)) * normal_cdf(calculate_d2(S, K, T, r, sigma)))
+
+    return c_rho
 
