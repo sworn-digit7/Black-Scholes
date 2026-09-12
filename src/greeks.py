@@ -58,3 +58,8 @@ def call_rho(S, K, T, r, sigma):
 
     return c_rho
 
+def put_rho(S, K, T, r, sigma):
+
+    p_rho = (-K * T * (math.e ** (-r * T)) * normal_cdf(-calculate_d2(S, K, T, r, sigma)))
+
+    return p_rho
