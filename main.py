@@ -26,7 +26,7 @@ def main():
     print(f"Delta: {call_delta(S, K, T, r, sigma):.4f}")
     print(f"Gamma: {gamma(S, K, T, r, sigma):.4f}")
     print(f"Vega: {vega(S, K, T, r, sigma):.4f}")
-    print(f"theta: {call_theta(S, K, T, r, sigma):.4f}")
+    print(f"Theta: {call_theta(S, K, T, r, sigma):.4f}")
     print(f"Rho: {call_rho(S, K, T, r, sigma):.4f}")
 
     plot_sensitivity("S", np.linspace(S * 0.5, S * 1.5, 100), S, K, T, r, sigma, "graphs/stock_price_sensitivity.png")
